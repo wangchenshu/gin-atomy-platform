@@ -19,8 +19,9 @@ services:
     #     networks:
     #       - local-net
     db:
-      image: mysql:8
+      # image: mysql:8
       container_name: db
+      build: ./docker/mysql
       restart: always
       environment:
         - MYSQL_ROOT_PASSWORD=${DATABASE_PASSWORD}
@@ -30,7 +31,6 @@ services:
         - "${DATABASE_PORT}:${DATABASE_PORT}"
       volumes:
         - "db-data:/var/lib/mysql"
-        - ./docker/mysql/conf.d:/etc/mysql/conf.d
       networks:
         - local-net
   

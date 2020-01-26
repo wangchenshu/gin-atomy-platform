@@ -1,10 +1,6 @@
 ### How to start
 
-#### Start program
+#### Start all service
 ##### $ sh startup.sh
-
-#### Init DB
-##### $ cd docker/bin
-##### $ sh docker-restory.sh db
 
 #### enjoy
